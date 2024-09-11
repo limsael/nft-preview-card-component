@@ -1,0 +1,40 @@
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Neutral
+
+$very-dark-blue-main-bg: hsl(217, 54%, 11%);
+$very-dark-blue-card-bg: hsl(216, 50%, 16%);
+$very-dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+/*  Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&display=swap");
+
+/* Reset */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: $very-dark-blue-main-bg;
+  padding: 3rem 1.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+hr {
+  color: $very-dark-blue-line;
+  margin-block-end: 0.95rem;
+}

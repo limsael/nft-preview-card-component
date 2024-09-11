@@ -1,0 +1,124 @@
+.card {
+  background-color: $very-dark-blue-card-bg;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+
+  &__image {
+    position: relative;
+
+    &:hover {
+      .card__overlay {
+        opacity: 0.4;
+      }
+      .card__image--view {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.6rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $cyan;
+    border-radius: 0.6rem;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  &__image--view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  &__title {
+    color: $white;
+    margin-block-end: 0.75rem;
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  &__description {
+    color: $soft-blue;
+    margin-block-end: 0.75rem;
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 0.95rem;
+  }
+
+  &__token,
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__token {
+    color: $cyan;
+  }
+
+  &__time {
+    color: $soft-blue;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-block-end: 0.95rem;
+    gap: 0.7rem;
+  }
+
+  &__img--profile {
+    width: 38px;
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+
+  &__owner {
+    color: $soft-blue;
+
+    &--name {
+      color: $white;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-block-start: 6rem;
+  }
+  .card {
+    max-width: 300px;
+  }
+}
